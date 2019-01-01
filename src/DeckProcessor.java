@@ -2,6 +2,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+/**
+ * This class is a part of the blackjack project.
+ * It is a simple, text based blackjack game.
+ *
+ * The deckprocessor class is used to manage cards and decks.
+ */
 public class DeckProcessor {
     private Random ran = new Random();
 
@@ -9,6 +15,11 @@ public class DeckProcessor {
 
     }
 
+    /**
+     * Sort an unsorted deck of cards by number.
+     * If your argument is a standard deck it will be sorted into: Aces, dueces, threes, fours etc all the way up to kings.
+     * @param deck  the deck to be shuffled.
+     */
     public void sortDeckByNumber(Deck deck){
         List<PlayingCard> deckList = deck.getDeck();
         List<PlayingCard> aces = new ArrayList<PlayingCard>();
@@ -84,6 +95,11 @@ public class DeckProcessor {
         deckList.addAll(kings);
     }
 
+    /**
+     * A method for sorting a deck of cards by suit.
+     * If your argument is a standard deck of cards the result will be each suit with each corresponding card from Ace to King.
+     * @param deck The deck you want to be sorted.
+     */
     public void sortDeckBySuit(Deck deck){
         List<PlayingCard> deckList = deck.getDeck();
         List<PlayingCard> heartSection = new ArrayList<PlayingCard>();
@@ -120,6 +136,10 @@ public class DeckProcessor {
         deckList.addAll(clubSection);
     }
 
+    /**
+     * Helper method to sort a section of cards by their numerical value.
+     * @param sectionList
+     */
     public void sortSectionByNumer(List<PlayingCard> sectionList){
             for (int i = 1; i < sectionList.size(); i++) {
                 int j = i;
@@ -132,6 +152,10 @@ public class DeckProcessor {
             }
     }
 
+    /**
+     * A method used for randomly shuffling a deck of cards.
+     * @param deck the deck you want to shuffle.
+     */
     public void shuffleDeck(Deck deck){
     int deckSize = deck.getDeckSize();
     List<PlayingCard> deckClone = new ArrayList<PlayingCard>(deck.getDeck());
@@ -144,6 +168,12 @@ public class DeckProcessor {
         }
     }
 
+    /**
+     * A method used to take any number of cards from a certain deck and place it into a different deck.
+     * @param howMany The number of cards you wish to draw
+     * @param deckFrom  The giving deck
+     * @param deckTo    The receiving deck
+     */
     public void drawCards(int howMany, Deck deckFrom, Deck deckTo){
         if(deckFrom.getDeckSize() >= howMany) {
             List<PlayingCard> cardsToDraw = new ArrayList<>();
