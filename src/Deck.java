@@ -88,7 +88,7 @@ public class Deck {
      * @return String containing all the cards in a single row
      */
     public String deckToStringSingleRow(){
-        String deckString = deck.get(0).cardToString();
+        String deckString = deck.get(0).cardToString(); // so the string does not start with "+".
         for (int i = 1; i < this.getDeckSize(); i++){
             deckString = deckString + " + " + deck.get(i).cardToString();
         }

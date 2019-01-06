@@ -8,7 +8,7 @@
  *  The game ends when all players run out of money.
  *
  *   @author Elias Rinzén
- *   @version 2019-01-01
+ *   @version 2019-01-05
  */
 public class Main {
     public static void main(String[] args) {
@@ -16,3 +16,8 @@ public class Main {
         engine.play();
     }
 }
+
+// Changelog
+//
+//  5 jan: Simple bug fixes
+//

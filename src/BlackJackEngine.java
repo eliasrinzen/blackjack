@@ -127,7 +127,7 @@ public class BlackJackEngine {
             player.placeBet(bet);
         }
         else{
-            while (!(player.getCash() > bet) || !(bet > 0)){
+            while (!(player.getCash() >= bet) || !(bet >= 0)){
                 bet = getNewBet(player,bet);
             }
             player.placeBet(bet);
