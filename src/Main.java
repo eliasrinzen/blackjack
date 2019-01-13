@@ -20,4 +20,5 @@ public class Main {
 // Changelog
 //
 //  5 jan: Simple bug fixes
+//  9 jan: Cleared up the "GUI" a bit
 //

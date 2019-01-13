@@ -333,7 +333,7 @@ public class BlackJackEngine {
      * @param player    the player of which to display information for
      */
     public void printHandCommand(Player player){
-        System.out.println(player.getName() + "'s hand value: " + calculateHandValue(player.getHand()) + "                " + player.getHand().deckToStringSingleRow());
+        System.out.println(player.getName() + "'s hand value: "  + calculateHandValue(player.getHand()) + "\n" + player.getHand().deckToStringRows());
         System.out.println("What do you want to do?" + " You can: " + getLegalCommands(player));
     }
 
