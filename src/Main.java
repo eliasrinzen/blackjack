@@ -21,4 +21,4 @@ public class Main {
 //
 //  5 jan: Simple bug fixes
 //  9 jan: Cleared up the "GUI" a bit
-//
+//  3 mars: Commented out splitting. TODO

@@ -357,9 +357,11 @@ public class BlackJackEngine {
             playHand(player);
 
         }
+        /*
         else if(command.equalsIgnoreCase("split") && player.getCommandCount() == 0 && player.getHand().getCard(0).getNumber() == player.getHand().getCard(1).getNumber()){
             player.increaseCommandCount();
         }
+        */
         else if(command.equalsIgnoreCase("stand")){
 
         }
@@ -382,9 +384,10 @@ public class BlackJackEngine {
         if(player.getCommandCount() == 0 && calculateHandValue(player.getHand()) < 21 && player.getCash() >= player.getBet()){
             commandString += ", Double";
         }
-        if(player.getCommandCount() == 0 && player.getHand().getCard(0).getNumber() == player.getHand().getCard(1).getNumber()){
+        /*if(player.getCommandCount() == 0 && player.getHand().getCard(0).getNumber() == player.getHand().getCard(1).getNumber()){
             commandString += ", Split";
         }
+        */
         return commandString;
     }
 
